@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:XamarinExamples.Forms.SkiaSharpPanning" 
+    xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms" 
+    xmlns:b="clr-namespace:XamarinExamples.Forms.SkiaSharpPanning.Behaviors;assembly=XamarinExamples.Forms.SkiaSharpPanning" 
+    xmlns:e="clr-namespace:XamarinExamples.Forms.SkiaSharpPanning.Effects;assembly=XamarinExamples.Forms.SkiaSharpPanning" 
+    x:Class="XamarinExamples.Forms.SkiaSharpPanning.XamarinExamples_Forms_SkiaSharpPanningPage">
+    <StackLayout>
+        <Label Text="Tap and pan the SkiaSharp view below" VerticalOptions="Center" HorizontalOptions="Center" />
+        <views:SKCanvasView x:Name="canvasChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" EnableTouchEvents="true" PaintSurface="Handle_PaintSurface">
+            <views:SKCanvasView.Effects>
+                <e:TouchEffect TouchAction="Handle_TouchAction" Capture="true" />
+            </views:SKCanvasView.Effects>
+        </views:SKCanvasView>
+    </StackLayout>
+</ContentPage>
